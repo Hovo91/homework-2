@@ -1,6 +1,6 @@
 function flattensArray(array = [], newArray = []) {
   for (let i = 0; i < array.length; i++) {
-    if(typeof array[i] === "object") {
+    if(Array.isArray(array[i])) {
       flattensArray(array[i], newArray);
     } else {
       newArray.push(array[i]);
